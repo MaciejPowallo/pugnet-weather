@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table comment="pugnet_weather_weather table" engine="innodb" name="pugnet_weather_weather" resource="default">
+        <column name="weather_id" identity="true" nullable="false" padding="6" unsigned="true" xsi:type="smallint" comment="Entity ID" />
+        <column name="city" length="255" nullable="true" xsi:type="varchar" comment="City" />
+        <column name="temperature" nullable="false" xsi:type="float" precision="5" scale="2" default="0.00" comment="Temperature"/>
+        <column name="create_date" nullable="false" xsi:type="timestamp" comment="Create Date"/>
+        <constraint referenceId="PRIMARY" xsi:type="primary">
+            <column name="weather_id"/>
+        </constraint>
+    </table>
+</schema>

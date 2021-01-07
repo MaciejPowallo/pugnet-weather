@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::content">
+                    <resource id="Pugnet_Weather::core" title="Pugnet" sortOrder="100">
+                        <resource id="Pugnet_Weather::config" sortOrder="20" title="Pugnet Config" translate="title"/>
+                    </resource>
+                </resource>
+            </resource>
+            <resource id="Pugnet_Weather::weather_listing" title="Weather History" sortOrder="110">
+                <resource id="Pugnet_Weather::Weather_save" sortOrder="10" title="Save Weather"/>
+                <resource id="Pugnet_Weather::Weather_delete" sortOrder="20" title="Delete Weather"/>
+                <resource id="Pugnet_Weather::Weather_update" sortOrder="30" title="Update Weather"/>
+                <resource id="Pugnet_Weather::Weather_view" sortOrder="40" title="View Weather"/>
+            </resource>
+        </resources>
+    </acl>
+</config>

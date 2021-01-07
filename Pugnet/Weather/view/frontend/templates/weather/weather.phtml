@@ -1,0 +1,44 @@
+<?php
+/**
+ * Weather template
+ *
+ * @category     Pugnet
+ * @package      Pugnet_Weather
+ * @author       Maciej Powallo <maciej.powallo@gmail.com>
+ * @copyright    2021 Pugnet
+ * @since        1.0.0
+ *
+ */
+
+/**
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+<div class="weather-wrapper">
+    <div class="weather-row">
+        <div class="title"><h2><?= $escaper->escapeHtml(__('Weather Forecast')) ?></h2></div>
+        <div class="content">
+            <div class="city-name">
+                <?= $escaper->escapeHtml(__('Weather for ')) ?>
+                <span id="city-value"></span>
+            </div>
+            <div class="temperature">
+                <?= $escaper->escapeHtml(__('Temperature')) ?>
+                <span id="temp-value"></span>&#8451;
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+    	"*": {
+        	"Magento_Ui/js/core/app": {
+            	"components": {
+                	"section": {
+                    	"component": "Pugnet_Weather/js/weather"
+                	}
+            	}
+        	}
+    	}
+    }
+</script>

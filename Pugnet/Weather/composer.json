@@ -1,0 +1,36 @@
+{
+    "name": "pugnet/module-weather",
+    "description": "Magento 2 Module - Weather API implementation",
+    "type": "magento2-module",
+    "readme": "README.md",
+    "license": [
+        ""
+    ],
+    "keywords": [
+        "magento2",
+        "import",
+        "weather"
+    ],
+    "authors": [
+        {
+            "name": "Maciej Powallo",
+            "email": "maciej.powallo@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.3.0||~7.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.5.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Pugnet\\Weather\\": ""
+        }
+    },
+    "version": "1.0.0"
+}

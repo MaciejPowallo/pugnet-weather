@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Pugnet_Weather::pugnet_menu" title="Pugnet" translate="title" sortOrder="999"
+             module="Pugnet_Weather"
+             resource="Pugnet_Weather::core"/>
+        <add id="Pugnet_Weather::pugnet_weather_title" title="Weather API" translate="title" sortOrder="10"
+             module="Pugnet_Weather"
+             parent="Pugnet_Weather::pugnet_menu"
+             resource="Magento_Backend::content"/>
+        <add id="Pugnet_Weather::pugnet_weather" title="Weather API" translate="title" sortOrder="10"
+             module="Pugnet_Weather"
+             parent="Pugnet_Weather::pugnet_menu"
+             resource="Magento_Backend::content"/>
+        <add id="Pugnet_Weather::configuration" title="Configuration" translate="title" sortOrder="10"
+             module="Pugnet_Weather"
+             parent="Pugnet_Weather::pugnet_weather"
+             resource="Magento_Backend::content"
+             action="adminhtml/system_config/edit/section/pugnet_weather"/>
+        <add id="Pugnet_Weather::pugnet_weather_weather" title="Weather History" translate="title" sortOrder="20"
+             module="Pugnet_Weather"
+             parent="Pugnet_Weather::pugnet_weather"
+             resource="Magento_Backend::content"
+             action="pugnet_weather/weather/index"/>
+    </menu>
+</config>
